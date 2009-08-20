@@ -6,6 +6,6 @@ xml.result('xmlns' => "http://projecthdata.org/hdata/schemas/2009/06/result",
            if @vital.value[:unit]
            res.value("xsi:type"=>"unitValue", "unit"=>"#{@vital.value[:unit]}", "value"=>"#{@vital.value[:value]}")         
          elsif @vital.value[:diastolic]
-           res.value("xsi:type"=>"bp", "diastolic"=>"#{@vital.value[:diastolic]}", "systolic"=>"#{@vital.value[:systolic]}")        
+           res.value("xsi:type"=>"blood_pressure", "diastolic"=>"#{@vital.value[:diastolic]}", "systolic"=>"#{@vital.value[:systolic]}")        
          end
 end
